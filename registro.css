@@ -1,0 +1,135 @@
+/* Aplica box-sizing: border-box a todos los elementos,
+   lo cual incluye el padding y border dentro del ancho/alto total */
+* {
+  box-sizing: border-box;
+}
+
+/* Estilo base para body y html */
+body, html {
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0; /* Elimina relleno por defecto */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente principal */
+  background-color: var(--color2); /* Fondo claro (definido por variable CSS) */
+  color: var(--color4); /* Color de texto principal */
+  height: 100vh; /* Altura completa del viewport */
+}
+
+/* Contenedor principal de la página, usa flexbox para dividir la pantalla */
+.container {
+  display: flex; /* Diseño en columnas (formulario + imagen) */
+  min-height: 100vh; /* Asegura altura completa del viewport */
+}
+
+/* ──────────────────────── */
+/* SECCIÓN DEL FORMULARIO */
+/* ──────────────────────── */
+.form-section {
+  flex: 1; /* Ocupa mitad del ancho */
+  display: flex;
+  flex-direction: column; /* Distribuye elementos de arriba hacia abajo */
+  justify-content: center; /* Centra verticalmente el contenido */
+  padding: 3rem 4rem; /* Espaciado interno */
+  background-color: var(--color5); /* Fondo blanco */
+  box-shadow: 3px 0 15px rgba(0,0,0,0.1); /* Sombra lateral suave */
+}
+
+/* Contenedor del logo */
+.logo {
+  width: 120px;
+  margin: 0 auto 1.5rem auto; /* Centrado horizontal + margen inferior */
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  display: block; /* Elimina espacio extra debajo de imagen */
+}
+
+/* Título principal del formulario */
+.title {
+  font-weight: 700; /* Negrita */
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--color4); /* Texto oscuro */
+}
+
+/* Parte del título en color destacado */
+.title span {
+  color: var(--color1); /* Naranja u otro color primario */
+}
+
+/* Párrafo introductorio */
+.intro {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--color3); /* Gris medio */
+}
+
+/* Contenedor del formulario */
+.login-form {
+  display: flex;
+  flex-direction: column; /* Elementos en columna */
+}
+
+/* Etiquetas de los campos */
+.form-label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--color4);
+}
+
+/* Campos de entrada (input) */
+.form-input {
+  padding: 12px 15px; /* Espaciado interno */
+  margin-bottom: 1.5rem; /* Espaciado inferior entre campos */
+  border: 2px solid var(--color3); /* Borde gris */
+  border-radius: 6px; /* Bordes redondeados */
+  font-size: 1rem;
+  transition: border-color 0.3s ease; /* Transición al enfocar */
+}
+
+/* Estilo al enfocar el input */
+.form-input:focus {
+  border-color: var(--color1); /* Se vuelve naranja */
+  outline: none; /* Quita el borde azul por defecto */
+}
+
+/* Botón de envío */
+.btn {
+  background-color: var(--color1); /* Naranja o primario */
+  color: var(--color5); /* Texto claro/blanco */
+  padding: 14px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en el botón */
+.btn:hover {
+  background-color: darkorange;
+}
+
+/* ──────────────────────── */
+/* SECCIÓN DE IMAGEN */
+/* ──────────────────────── */
+.image-section {
+  flex: 1; /* Ocupa mitad del ancho */
+  position: relative;
+  overflow: hidden; /* Evita que desborde contenido */
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  background: var(--color3); /* Fondo gris */
+}
+
+/* Imagen de fondo */
+.image-section img {
+  width: 100%; /* Ocupa todo el ancho */
+  height: 100vh; /* Ocupa toda la altura del viewport */
+  object-fit: cover; /* Cubre sin deformar */
+  object-position: center; /* Centrada */
+  user-select: none; /* No se puede seleccionar la imagen */
+}
