@@ -1,2 +1,0 @@
-# BullyingCero
-BullyingCero
